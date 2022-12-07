@@ -4,10 +4,13 @@
 
 package frc.robot;
 
+import com.ctre.phoenix.motorcontrol.can.TalonFX;
+
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.ExampleSubsystem;
+import frc.robot.subsystems.TankDrivetrain;
 import edu.wpi.first.wpilibj2.command.Command;
 
 /**
@@ -26,6 +29,12 @@ public class RobotContainer {
   public RobotContainer() {
     // Configure the button bindings
     configureButtonBindings();
+    
+    TalonFX[] left_motors = {};
+    TalonFX[] right_motors = {};
+    IDrivetrain drivetrain = new TankDrivetrain(new MotorGroup(left_motors, false), new MotorGroup(right_motors, true));
+
+    drivetrain.driveStop();
   }
 
   /**

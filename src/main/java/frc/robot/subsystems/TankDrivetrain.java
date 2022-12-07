@@ -8,9 +8,10 @@ import com.ctre.phoenix.motorcontrol.TalonFXControlMode;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.MotorGroup;
+import frc.robot.IDrivetrain;
 
 
-public class TankDrivetrain extends SubsystemBase {
+public class TankDrivetrain extends SubsystemBase implements IDrivetrain {
   public final MotorGroup m_motor_group_right;
   public final MotorGroup m_motor_group_left;
 
