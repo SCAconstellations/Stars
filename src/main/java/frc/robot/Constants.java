@@ -20,6 +20,9 @@ public final class Constants {
     //
     public static final double WHEEL_DIAMETER = 6.0;
     public static final double DRIVETRAIN_GEAR_RATIO = 7.56;
-    public static final double ENCODER_TICKS_IN_REV = 2048;
-    public static final double MULTIPLY_TICS_BY_THIS_TO_FIND_INCHES_WHEELS_MOVED = (((WHEEL_DIAMETER * Math.PI) / DRIVETRAIN_GEAR_RATIO) / ENCODER_TICKS_IN_REV );
+    public static final double DRIVETRAIN_ENCODER_TICKS = 2048;
+    public static final double DRIVETRAIN_TICKS_TO_INCHES = (((WHEEL_DIAMETER * Math.PI) / DRIVETRAIN_GEAR_RATIO) / DRIVETRAIN_ENCODER_TICKS );
+
+    public static final double ROTATION_ENCODER_TICKS = 2048;
+    public static final double ROTATION_TICKS_TO_RADIANS = (2 * Math.PI) / ROTATION_ENCODER_TICKS;
 }
